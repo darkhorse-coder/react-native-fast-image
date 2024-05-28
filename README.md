@@ -36,6 +36,8 @@ Performant React Native image component.
   <em>FastImage example app.</em>
 </p>
 
+This package forked and updated from [React-native-fast-image](https://github.com/DylanVann/react-native-fast-image) to remove deprecated class for ios.
+
 React Native's `Image` component handles image caching like browsers
 for the most part.
 If the server is returning proper cache control
@@ -76,15 +78,15 @@ cd ios && pod install
 import FastImage from 'react-native-fast-image'
 
 const YourImage = () => (
-	<FastImage
-		style={{ width: 200, height: 200 }}
-		source={{
-			uri: 'https://unsplash.it/400/400?image=1',
-			headers: { Authorization: 'someAuthToken' },
-			priority: FastImage.priority.normal,
-		}}
-		resizeMode={FastImage.resizeMode.contain}
-	/>
+    <FastImage
+        style={{ width: 200, height: 200 }}
+        source={{
+            uri: 'https://unsplash.it/400/400?image=1',
+            headers: { Authorization: 'someAuthToken' },
+            priority: FastImage.priority.normal,
+        }}
+        resizeMode={FastImage.resizeMode.contain}
+    />
 )
 ```
 
@@ -226,14 +228,14 @@ Preload images to display later. e.g.
 
 ```js
 FastImage.preload([
-	{
-		uri: 'https://facebook.github.io/react/img/logo_og.png',
-		headers: { Authorization: 'someAuthToken' },
-	},
-	{
-		uri: 'https://facebook.github.io/react/img/logo_og.png',
-		headers: { Authorization: 'someAuthToken' },
-	},
+    {
+        uri: 'https://facebook.github.io/react/img/logo_og.png',
+        headers: { Authorization: 'someAuthToken' },
+    },
+    {
+        uri: 'https://facebook.github.io/react/img/logo_og.png',
+        headers: { Authorization: 'someAuthToken' },
+    },
 ])
 ```
 
